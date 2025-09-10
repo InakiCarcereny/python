@@ -16,7 +16,9 @@ class Test:
 
       vinoteca.reponer_jugos()
 
-      vinoteca.vender_jugos(4900)
+      print(f"jugos: {vinoteca.obtener_cantidad_jugos()}")
+
+      vinoteca.vender_jugos(6000)
 
       print(f"jugos restantes: {vinoteca.obtener_cantidad_jugos()}")
     except ValueError as e:
