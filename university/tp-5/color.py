@@ -9,6 +9,11 @@ class Color:
 
     """COMANDOS"""
     def variar(self, valor: int):
+        if not isinstance(valor, int):
+            raise TypeError("El valor tiene que ser un numero")
+        if valor < 0 or valor > 255:
+            raise ValueError("EL valor tiene que ser un numero mayor a 0 y menor a 255")
+
         calcular_rojo = self.__rojo + valor
         calcular_azul = self.__azul + valor
         calcular_verde = self.__verde + valor
@@ -29,6 +34,11 @@ class Color:
             self.__verde = calcular_verde
 
     def variar_rojo(self, valor: int):
+        if not isinstance(valor, int):
+            raise TypeError("El valor tiene que ser un numero")
+        if valor < 0 or valor > 255:
+            raise ValueError("El valor tiene que ser un numero mayor a 0 y menor a 255")
+
         calcular_rojo = self.__rojo + valor
 
         if calcular_rojo > 255:
@@ -38,6 +48,11 @@ class Color:
 
 
     def variar_azul(self, valor: int):
+        if not isinstance(valor, int):
+            raise TypeError("El valor tiene que ser un numero positivo")
+        if valor < 0 or valor > 255:
+            raise ValueError("El valor tiene que ser un numero maoyor a 0 y menor a 255")
+
         calcular_azul = self.__azul + valor
 
         if calcular_azul > 255:
@@ -45,21 +60,41 @@ class Color:
         else:
             self.__azul = calcular_azul
 
-    def variar_verder(self, valor: int):
+    def variar_verde(self, valor: int):
+        if not isinstance(valor, int):
+            raise TypeError("El valor tiene que ser un numero positivo")
+        if valor < 0 or valor > 255:
+            ("El valor tiene que ser un numero mayor a 0 y menor a 255")
+
         calcular_verde = self.__verde + valor
 
-        if calcular_verde == self.__verde + valor:
+        if calcular_verde > 255:
             self.__verde = 255
         else:
             self.__verde = calcular_verde
 
     def establecer_rojo(self, valor: int):
+        if not isinstance(valor, int):
+            raise TypeError("El valor tiene que ser un numero positivo")
+        if valor < 0 or valor > 255:
+            ("El valor tiene que ser un numero mayor a 0 y menor a 255")
+
         self.__rojo = valor
 
     def establecer_azul(self, valor: int):
+        if not isinstance(valor, int):
+            raise TypeError("El valor tiene que ser un numero positivo")
+        if valor < 0 or valor > 255:
+            ("El valor tiene que ser un numero mayor a 0 y menor a 255")
+
         self.__azul = valor
 
     def establecer_verde(self, valor: int):
+        if not isinstance(valor, int):
+            raise TypeError("El valor tiene que ser un numero positivo")
+        if valor < 0 or valor > 255:
+            ("El valor tiene que ser un numero mayor a 0 y menor a 255")
+
         self.__verde = valor
 
     def copiar(self, otro_color: 'Color'):
@@ -74,7 +109,7 @@ class Color:
     def obtener_azul(self) -> int:
         return self.__azul
 
-    def obtener_verder(self) -> int:
+    def obtener_verde(self) -> int:
         return self.__verde
 
     def es_rojo(self) -> bool:

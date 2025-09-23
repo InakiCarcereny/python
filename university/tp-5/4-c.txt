@@ -1,0 +1,3 @@
+color1 pasa a tener los valores: rojo:115, azul: 115, verde: 115
+color2 pasa a tener los valores de color 5, son equivalentes
+color3 pasa a apuntar al mismo espacio en memoria de color2
