@@ -1,0 +1,24 @@
+A-
+
+B5 = B2.clonar()
+
+.va a clonar el borde y el color, pero al ser una copia en profundidad, el color va a ser un nuevo espacio en memoria equivalente al color de B2.
+
+print(B5.es_igual_que(B2))
+
+.va a retonar False, ya que estan aputando a distintos espacios en memoria.
+
+B-
+
+B5 = B2.clonar()
+
+.va a clonar el borde y el color, pero al ser una copia superficial, el color va a estar apuntando al mismo espacion en memoria.
+
+print(B5.es_igual_que(B2))
+
+.va a retonar False, ya que estan apuntando al mismo espacio en memoria, y para que sea True en igualdad en profundidad tienen que estar apuntando a distinto espacio en memoria.
+
+C-
+
+.hecho con el ejercicio A y B, que ambos sean en profundidad.
+
