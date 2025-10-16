@@ -1,4 +1,4 @@
-from clases.polizaInmueble import Poliza_inmueble
+from polizaInmueble import Poliza_inmueble
 
 class Poliza_inmueble_escolar(Poliza_inmueble):
     def __init__(self, numero: int, incendio: float | int, explosion: float | int, robo: float | int, cant_personas: int, monto_equipamiento: float | int, monto_mobiliario: float | int, monto_persona: float | int):
@@ -8,17 +8,17 @@ class Poliza_inmueble_escolar(Poliza_inmueble):
         if cant_personas < 0:
             raise ValueError("Cantidad personas no puede ser 0")
 
-        if not isinstance(monto_equipamiento, float, int): # type: ignore
+        if not isinstance(monto_equipamiento, (float, int)):
             raise TypeError("Monto equipamiento tiene que ser un entero o decimal")
         if monto_equipamiento < 0:
             raise ValueError("Monto equipamiento no puede ser 0")
 
-        if not isinstance(monto_mobiliario, float, int): # type: ignore
+        if not isinstance(monto_mobiliario, (float, int)):
             raise TypeError("Monto mobiliario tiene que ser un entero o decimal")
         if monto_mobiliario < 0:
             raise ValueError("Monto mobiliario no puede ser 0")
 
-        if not isinstance(monto_persona, float, int): # type: ignore
+        if not isinstance(monto_persona, (float, int)):
             raise TypeError("Monto persona tiene que ser un entero o decimal")
         if monto_persona < 0:
             raise ValueError("Monto persona no puede ser 0")
@@ -28,16 +28,36 @@ class Poliza_inmueble_escolar(Poliza_inmueble):
         self.__monto_mobiliario = monto_mobiliario
         self.__monto_persona = monto_persona
 
-    def establecer_cant_personas(self, cant_personas: float | int):
+    def establecer_cant_personas(self, cant_personas: int):
+        if not isinstance(cant_personas, int):
+            raise TypeError("Cantidad personas tiene que ser un entero o decimal")
+        if cant_personas < 0:
+            raise ValueError("Cantidad personas no puede ser 0")
+
         self.__cant_personas = cant_personas
 
     def establecer_monto_equipamiento(self, monto_equipamiento: float | int):
+        if not isinstance(monto_equipamiento, (float, int)):
+            raise TypeError("Monto equipamiento tiene que ser un entero o decimal")
+        if monto_equipamiento < 0:
+            raise ValueError("Monto equipamiento no puede ser 0")
+
         self.__monto_equipamiento = monto_equipamiento
 
     def establecer_monto_mobiliario(self, monto_mobiliario: float | int):
+        if not isinstance(monto_mobiliario, (float, int)):
+            raise TypeError("Monto mobiliario tiene que ser un entero o decimal")
+        if monto_mobiliario < 0:
+            raise ValueError("Monto mobiliario no puede ser 0")
+        
         self.__monto_mobiliario = monto_mobiliario
 
     def establecer_monto_persona(self, monto_persona: float | int):
+        if not isinstance(monto_persona, (float, int)):
+            raise TypeError("Monto persona tiene que ser un entero o decimal")
+        if monto_persona < 0:
+            raise ValueError("Monto persona no puede ser 0")
+
         self.__monto_persona = monto_persona
 
     def obtener_cant_personas(self) -> int:
@@ -53,7 +73,14 @@ class Poliza_inmueble_escolar(Poliza_inmueble):
         return self.__monto_persona
 
     def costo_poliza(self) -> float | int:
-        return 0.00
+        base = super().costo_poliza()
+        extra = self.__monto_equipamiento + self.__monto_mobiliario + (self.__cant_personas * self.__monto_persona)
+
+        return base + extra
 
     def __str__(self) -> str:
         return f"{super().__str__()}, Cantidad personas: {self.__cant_personas}, Monto equipamiento: {self.__monto_equipamiento}, Monto mobiliario: {self.__monto_mobiliario}, Monto persona: {self.__monto_persona}"
+
+    def __repr__(self) -> str:
+        return f"{super().__repr__()}, Cantidad personas: {self.__cant_personas}, Monto equipamiento: {self.__monto_equipamiento}, Monto mobiliario: {self.__monto_mobiliario}, Monto persona: {self.__monto_persona}"
+
