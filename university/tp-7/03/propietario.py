@@ -1,5 +1,3 @@
-from inmueble import Inmueble
-
 class Propietario:
     def __init__(self, nombre: str, dni: int):
         if not isinstance(nombre, str):

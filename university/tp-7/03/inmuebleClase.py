@@ -1,6 +1,6 @@
 from propietario import Propietario
 
-class Inmueble():
+class Inmueble_clase():
     def __init__(self, codigo: int, domicilio: str, metros_cuadrados: int, estado: int):
         if not isinstance(codigo, int):
             raise TypeError("Codigo tiene que ser un entero")
@@ -96,3 +96,12 @@ class Inmueble():
             raise ValueError("Metros cuadrados tiene que ser un numero valido")
 
         return self._metros_cuadrados * m2
+
+    def __str__(self) -> str:
+        return (
+            f"Codigo: {self._codigo}\n"
+            f"Domicilio: {self._domicilio}\n"
+            f"Propietario: {self._propietario}\n"
+            f"Metros cuadrados: {self._metros_cuadrados}\n"
+            f"Estado: {self._estado}\n"
+        )

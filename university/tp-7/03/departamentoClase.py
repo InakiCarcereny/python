@@ -1,6 +1,6 @@
-from inmueble import Inmueble
+from inmuebleClase import Inmueble_clase
 
-class Departamento(Inmueble):
+class Departamento(Inmueble_clase):
     def __init__(self, codigo: int, domicilio: str, metros_cuadrados: int, estado: int, gastos_comunes: float | int, cochera: bool):
         super().__init__(codigo, domicilio, metros_cuadrados, estado)
         if not isinstance(gastos_comunes, (float, int)):
@@ -52,3 +52,10 @@ class Departamento(Inmueble):
             raise ValueError("Metros cuadrados tiene que ser un numero valido")
 
         return self._metros_cuadrados * m2
+
+    def __str__(self) -> str:
+        return (
+            f"{super().__str__()}"
+            f"Gastos comunes: {self.__gastos_comunes}\n"
+            f"Cochera: {self.__cochera}\n"
+        )

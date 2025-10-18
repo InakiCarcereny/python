@@ -1,27 +1,18 @@
-from inmueble import Inmueble
+from inmuebleClase import Inmueble_clase
 
 class Inmobiliaria:
     def __init__(self):
-        self.__propiedades: list[Inmueble] = []
+        self.__propiedades: list[Inmueble_clase] = []
 
-    def insertar(self, inmueble: 'Inmueble'):
-        if isinstance(inmueble, list):
-            for inmueble in self.__propiedades:
-                if isinstance(inmueble, 'Inmueble'):
-                    if inmueble not in self.__propiedades:
-                        self.__propiedades.append(inmueble)
-                    else:
-                      raise ValueError("Alguna de esas propiedades ya se encuentra en la lista de propiedades")
-        elif isinstance(inmueble, 'Inmueble'):
-            if inmueble not in self.__propiedades:
-                self.__propiedades.append(inmueble)
-            else:
-                raise ValueError("Esa propiedad ya se encuentra en la lista de propiedades")
+    def insertar(self, inmueble: 'Inmueble_clase'):
+        if inmueble not in self.__propiedades:
+            self.__propiedades.append(inmueble)
         else:
-            raise TypeError("Inmueble NO es una instancia de lista ni de Inmueble")
+            raise ValueError("Esa propiedad ya se encuentra en la lista de propiedades")
+
         
-    def eliminar(self, inmueble: 'Inmueble'):
-        if not isinstance(inmueble, Inmueble):
+    def eliminar(self, inmueble: 'Inmueble_clase'):
+        if not isinstance(inmueble, Inmueble_clase):
             raise TypeError("Inmueble tiene que ser una instancia de Inmueble")
         
         if inmueble in self.__propiedades:
@@ -29,7 +20,7 @@ class Inmobiliaria:
         else:
             raise ValueError("Ese inmueble NO se encuentra en la lista de inmuebles")
         
-    def obtener_inmuebles(self) -> list[Inmueble]:
+    def obtener_inmuebles(self) -> list[Inmueble_clase]:
         return self.__propiedades
     
     def esta_inmueble_codigo(self, codigo: int) -> bool:
@@ -44,8 +35,8 @@ class Inmobiliaria:
 
         return False
 
-    def esta_inmueble(self, inmueble: 'Inmueble') -> bool:
-        if not isinstance(inmueble, Inmueble):
+    def esta_inmueble(self, inmueble: 'Inmueble_clase') -> bool:
+        if not isinstance(inmueble, Inmueble_clase):
             raise TypeError("Inmueble tiene que ser una instancia de Inmueble")
         
         if inmueble in self.__propiedades:
@@ -53,8 +44,8 @@ class Inmobiliaria:
         else:
             return False
 
-    def es_igual(self, inmueble: 'Inmueble') -> bool:
-        if not isinstance(inmueble, Inmueble):
+    def es_igual(self, inmueble: 'Inmueble_clase') -> bool:
+        if not isinstance(inmueble, Inmueble_clase):
             raise TypeError("Inmueble tiene que ser una instancia de Inmueble")
 
         return self == inmueble
@@ -77,8 +68,8 @@ class Inmobiliaria:
 
         return contador
 
-    def mayor_precio_venta(self) -> Inmueble:
-        self.__propiedades.sort(key= lambda p: p.precio_venta(0))
+    def mayor_precio_venta(self) -> Inmueble_clase:
+        self.__propiedades.sort(key= lambda p: p.precio_venta(15))
         
         return self.__propiedades[len(self.__propiedades) - 1]
         
