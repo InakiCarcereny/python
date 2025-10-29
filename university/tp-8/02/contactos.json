@@ -1,5 +1,23 @@
 [
-  "{\"nombre\": \"Juan\", \"apellido\": \"Pérez\", \"telefono\": \"123456789\", \"correo_electronico\": \"juan@example.com\", \"direccion\": \"Calle Falsa 123\"}",
-  "{\"nombre\": \"María\", \"apellido\": \"Gómez\", \"telefono\": \"987654321\", \"correo_electronico\": \"maria@example.com\", \"direccion\": \"Av. Siempre Viva 742\"}",
-  "{\"nombre\": \"Pedro\", \"apellido\": \"López\", \"telefono\": \"555555555\", \"correo_electronico\": \"pedro@example.com\", \"direccion\": \"Ruta 8 km 15\"}"
+	{
+		"nombre": "Juan",
+		"apellido": "Pérez",
+		"telefono": "123456789",
+		"correo_electronico": "juan@example.com",
+		"direccion": "Calle Falsa 123"
+	},
+	{
+		"nombre": "María",
+		"apellido": "Gómez",
+		"telefono": "987654321",
+		"correo_electronico": "maria@example.com",
+		"direccion": "Av. Siempre Viva 742"
+	},
+	{
+		"nombre": "Pedro",
+		"apellido": "López",
+		"telefono": "555555555",
+		"correo_electronico": "pedro@example.com",
+		"direccion": "Ruta 8 km 15"
+	}
 ]

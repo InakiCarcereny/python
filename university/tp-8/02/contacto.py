@@ -48,22 +48,18 @@ class Contacto:
     def obtener_direccion(self) -> str:
       return self.__direccion
 
-    def a_json(self) -> str:
-      contacto = {
+    def a_json(self) -> dict:
+      return {
         "nombre": self.__nombre,
         "apellido": self.__apellido,
         "telefono": self.__telefono,
         "correo_electronico": self.__correo_electronico,
         "direccion": self.__direccion
       }
-
-      return json.dumps(contacto, ensure_ascii = False)
     
     @classmethod
-    def desde_json(cls, json_data) -> 'Contacto':
-      datos = json.loads(json_data)
-      
-      return cls(datos["nombre"], datos["apellido"], datos["telefono"], datos["correo_electronico"], datos["direccion"])
+    def desde_json(cls, json_data) -> 'Contacto':      
+      return cls(json_data["nombre"], json_data["apellido"], json_data["telefono"], json_data["correo_electronico"], json_data["direccion"])
     
     def __str__(self) -> str:
       return f"{self.__nombre} - {self.__apellido} - {self.__telefono} - {self.__correo_electronico} - {self.__direccion}" 
