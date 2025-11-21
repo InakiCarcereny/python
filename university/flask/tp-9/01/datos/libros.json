@@ -1,0 +1,12 @@
+{
+    "libros": [
+        {
+            "ISBN": 2222,
+            "titulo": "Harry Potter: El calis de fuego",
+            "autor": "JP Morgan",
+            "genero": "Fantasia, Aventura",
+            "anio_publicacion": 2000,
+            "cantidad_ejemplares": 5
+        }
+    ]
+}
