@@ -1,0 +1,20 @@
+{
+    "libros": [
+        {
+            "ISBN": 1111,
+            "titulo": "Harry Potter: El prisionero de Hazkabban",
+            "autor": "JK. Rowlin",
+            "genero": "Aventura, Fantasia",
+            "anio_publicacion": 2000,
+            "cantidad_ejemplares": 5
+        },
+        {
+            "ISBN": 2222,
+            "titulo": "Harry Potter: El caliz de fuego",
+            "autor": "JK. Rowlin",
+            "genero": "Aventura, Fantasia",
+            "anio_publicacion": 2008,
+            "cantidad_ejemplares": 5
+        }
+    ]
+}

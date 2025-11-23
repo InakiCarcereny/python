@@ -1,0 +1,14 @@
+{
+    "polizas": [
+        {
+            "numero": 3,
+            "incendio": 400,
+            "explosion": 300,
+            "robo": 325.4,
+            "cant_personas": 5,
+            "monto_equipamiento": 200,
+            "monto_mobiliario": 200,
+            "monto_persona": 200
+        }
+    ]
+}

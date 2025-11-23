@@ -1,0 +1,20 @@
+{
+    "prestamos": [
+        {
+            "id": 1,
+            "socio_dni": 46697629,
+            "libro_isbn": 1111,
+            "fecha_retiro": 2023,
+            "cant_dias": 4,
+            "fecha_devolucion": null
+        },
+        {
+            "id": 2,
+            "socio_dni": 46697645,
+            "libro_isbn": 1111,
+            "fecha_retiro": 2023,
+            "cant_dias": 4,
+            "fecha_devolucion": 2025
+        }
+    ]
+}

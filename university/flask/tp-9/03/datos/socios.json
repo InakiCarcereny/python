@@ -1,0 +1,18 @@
+{
+    "socios": [
+        {
+            "DNI": 46697629,
+            "nombre": "Inaki",
+            "apellido": "Carcereny",
+            "mail": "inaki@gmail.com",
+            "fecha_nacimiento": 2005
+        },
+        {
+            "DNI": 46697630,
+            "nombre": "Luca",
+            "apellido": "Kern",
+            "mail": "luca@gmail.com",
+            "fecha_nacimiento": 2005
+        }
+    ]
+}
