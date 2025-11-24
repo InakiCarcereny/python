@@ -1,0 +1,34 @@
+{
+    "ciudades": [
+        {
+            "id": 1,
+            "nombre": "Bahia Blanca",
+            "provincia": "Buenos Aires",
+            "puntos_turisticos": "Parque de Mayo"
+        },
+        {
+            "id": 2,
+            "nombre": "Mar del Plata",
+            "provincia": "Buenos Aires",
+            "puntos_turisticos": "La Rambla, Playa Varese, Torreón del Monje"
+        },
+        {
+            "id": 3,
+            "nombre": "Bariloche",
+            "provincia": "Río Negro",
+            "puntos_turisticos": "Cerro Catedral, Circuito Chico, Lago Nahuel Huapi"
+        },
+        {
+            "id": 4,
+            "nombre": "Mendoza",
+            "provincia": "Mendoza",
+            "puntos_turisticos": "Parque General San Martín, Viñedos, Cerro de la Gloria"
+        },
+        {
+            "id": 5,
+            "nombre": "Córdoba",
+            "provincia": "Córdoba",
+            "puntos_turisticos": "La Cañada, Manzana Jesuítica, Cerro Uritorco"
+        }
+    ]
+}

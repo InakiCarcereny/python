@@ -1,0 +1,56 @@
+{
+    "hoteles": [
+        {
+            "id": 2,
+            "nombre": "Healton",
+            "estrellas": 5,
+            "descripcion": "Hotel de lujo",
+            "pension": "pension_completa",
+            "ciudad": {
+                "id": 1,
+                "nombre": "Bahia Blanca",
+                "provincia": "Buenos Aires",
+                "puntos_turisticos": "Parque de Mayo"
+            }
+        },
+        {
+            "id": 3,
+            "nombre": "Costa Dorada",
+            "estrellas": 4,
+            "descripcion": "Hotel con vista al mar",
+            "pension": "media_pension",
+            "ciudad": {
+                "id": 2,
+                "nombre": "Mar del Plata",
+                "provincia": "Buenos Aires",
+                "puntos_turisticos": "La Rambla, Playa Varese, Torreón del Monje"
+            }
+        },
+        {
+            "id": 4,
+            "nombre": "Nevado Resort",
+            "estrellas": 5,
+            "descripcion": "Hotel de montaña",
+            "pension": "pension_completa",
+            "ciudad": {
+                "id": 3,
+                "nombre": "Bariloche",
+                "provincia": "Río Negro",
+                "puntos_turisticos": "Cerro Catedral, Circuito Chico, Lago Nahuel Huapi"
+            }
+        },
+        {
+            "id": 5,
+            "nombre": "Andes Wine Lodge",
+            "estrellas": 4,
+            "descripcion": "Hotel entre viñedos",
+            "pension": "desayuno",
+            "ciudad": {
+                "id": 4,
+                "nombre": "Mendoza",
+                "provincia": "Mendoza",
+                "puntos_turisticos": "Parque General San Martín, Viñedos, Cerro de la Gloria"
+            }
+        }
+    ]
+}
